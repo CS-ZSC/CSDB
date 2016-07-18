@@ -34,8 +34,14 @@ struct command read_command()
         cmd.arg = strtok(NULL, " \t\n");
     } else if (!strcmp(cmd_s, "NEW")) {
         cmd.id = NEW;
+    } else if (!strcmp(cmd_s, "SELECT")) {
+        cmd.id = SELECT;
+        cmd.arg = strtok(NULL, " \t\n");
     } else if (!strcmp(cmd_s, "LIST")) {
         cmd.id = LIST;
+    } else if (!strcmp(cmd_s, "DELETE")) {
+        cmd.id = DELETE;
+        cmd.arg = strtok(NULL, " \t\n");
     } else {
         cmd.id = -1;
     }

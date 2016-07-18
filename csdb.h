@@ -14,7 +14,9 @@ enum cmd_id {
     CREATE,
     OPEN,
     NEW,
+    SELECT,
     LIST,
+    DELETE,
 };
 
 struct command {
